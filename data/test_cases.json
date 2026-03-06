@@ -1,0 +1,126 @@
+[
+    {
+        "name": "Single Target Map",
+        "input": {
+            "grid": [
+                [
+                    0,
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    2,
+                    0
+                ]
+            ],
+            "start": [
+                0,
+                0
+            ],
+            "targets": [
+                [
+                    2,
+                    1
+                ]
+            ]
+        },
+        "expected_steps": 3,
+        "expected_target_reached": true
+    },
+    {
+        "name": "Unreachable Target",
+        "input": {
+            "grid": [
+                [
+                    0,
+                    1,
+                    2
+                ],
+                [
+                    0,
+                    1,
+                    0
+                ],
+                [
+                    0,
+                    1,
+                    0
+                ]
+            ],
+            "start": [
+                0,
+                0
+            ],
+            "targets": [
+                [
+                    0,
+                    2
+                ]
+            ]
+        },
+        "expected_target_reached": false
+    },
+    {
+        "name": "Multi-Target TSP Scenario",
+        "input": {
+            "grid": [
+                [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                [
+                    1,
+                    0,
+                    1,
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                [
+                    0,
+                    2,
+                    0,
+                    2,
+                    0
+                ]
+            ],
+            "start": [
+                0,
+                0
+            ],
+            "targets": [
+                [
+                    4,
+                    1
+                ],
+                [
+                    4,
+                    3
+                ]
+            ]
+        },
+        "expected_target_reached": true
+    }
+]

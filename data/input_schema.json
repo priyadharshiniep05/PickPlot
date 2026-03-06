@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PickPlot Input Schema",
+  "type": "object",
+  "properties": {
+    "grid": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "enum": [0, 1, 2],
+          "description": "0: Walkable, 1: Obstacle, 2: Target"
+        }
+      },
+      "description": "2D array representing the warehouse layout"
+    },
+    "start": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Starting coordinate [row, col]"
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "description": "Array of target coordinates [[row, col], ...]"
+    }
+  },
+  "required": [
+    "grid",
+    "start",
+    "targets"
+  ]
+}
